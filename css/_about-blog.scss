@@ -1,0 +1,52 @@
+.aboutMe{
+    width: 100%;
+    height: 600px;
+    background: url('../img/profile/1.jpeg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    
+    .about-info{
+        background: $main-white;
+        position: absolute;
+        top: 20%;
+        right: 0;
+        padding: 30px;
+        
+    }
+}
+.blog{
+    background: $main-black;
+    padding-top: 150px;
+    .blog-space{
+        margin-top: 70px;
+    }
+    .blog-head{
+        color: $main-white;
+    }
+}
+.contact{
+    background: url('../img/profile/IMG20201230165151-01-01.jpeg'), center center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    background-position: center center;
+    background-attachment: fixed;
+    .contact-cont{
+       margin: 150px 0px;
+        background: rgba(0, 0, 0, 0.849);
+        text-align: center;
+        padding: 20px;
+        i{
+            font-size: 30px;
+            padding: 20px;
+            color: $main-white;
+        }
+    }
+}
+.copyright{
+    background: $main-black;
+    color: $main-white;
+    font-size: 20px;
+}

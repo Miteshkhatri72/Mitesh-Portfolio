@@ -1,0 +1,442 @@
+@-webkit-keyframes sliderzoom {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes sliderzoom {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+.main-head h1 {
+  font-size: 25px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.main-head h1::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #000;
+}
+
+.main-head h1::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #000;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus,
+.btn.focus, .btn:active.focus, .btn.active.focus {
+  outline: none !important;
+}
+
+.carousel-fade .carousel-inner {
+  max-height: 100vh;
+  background-size: cover;
+}
+
+.carousel-fade .carousel-inner .carousel-item {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .carousel-item img {
+  width: 100% !important;
+  height: 90vh;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+}
+
+.carousel-fade .carousel-inner .active {
+  -webkit-animation: sliderzoom 5s ease infinite;
+          animation: sliderzoom 5s ease infinite;
+}
+
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+html,
+body,
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+  height: 100%;
+}
+
+.starting {
+  opacity: 0;
+  position: relative;
+}
+
+.starting.slide-left {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  opacity: 0;
+  -webkit-transform: translate3d(-100px, 0px, 0px);
+  transform: translate3d(-100px, 0px, 0px);
+}
+
+.starting.slide-left.in-view {
+  opacity: 1;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+@media only screen and (max-width: 575px) {
+  .carousel-item {
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+  }
+  .carousel-item img {
+    width: 100% !important;
+    height: 40vh !important;
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
+  }
+  @-webkit-keyframes sliderzoom {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+  }
+  @keyframes sliderzoom {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+  }
+  .active {
+    -webkit-animation: sliderzoom 10s ease infinite !important;
+            animation: sliderzoom 10s ease infinite !important;
+  }
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 2000;
+  overflow: hidden !important;
+}
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: url(../img/logo/logo-main.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  background-size: cover;
+}
+
+nav {
+  display: none !important;
+  width: 100%;
+  z-index: 1001;
+  position: fixed !important;
+  top: 0;
+  border-bottom: 1px solid #000;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+nav .nav-brand {
+  text-decoration: none;
+}
+
+nav .nav-brand span {
+  color: #000;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+nav .nav-item .nav-link {
+  color: #000;
+}
+
+nav .nav-item .nav-link::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  margin-bottom: 10px;
+  background-color: #000;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+nav .nav-item .nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  margin-top: 10px;
+  background-color: #000;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+nav .nav-item .nav-link:hover::after {
+  width: 70%;
+}
+
+nav .nav-item .nav-link:hover::before {
+  width: 70%;
+}
+
+nav .nav-active {
+  font-weight: bold;
+}
+
+.hero-bg .hero-img img {
+  width: 100%;
+  max-height: 100vh;
+  background-size: cover;
+}
+
+.add-nav {
+  background-color: #fff;
+  display: block !important;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.s-info {
+  padding-top: 20px;
+}
+
+.s-info .photography {
+  letter-spacing: 11px;
+}
+
+.btn-group-justified {
+  margin-top: 70px;
+  margin-bottom: 10px;
+}
+
+.portfolio {
+  padding-top: 150px;
+  overflow: hidden !important;
+}
+
+.portfolio .port-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #000;
+  border-radius: 0;
+}
+
+.portfolio .port-btn:focus {
+  outline: none !important;
+}
+
+.portfolio .is-checked {
+  background: #000;
+  color: #fff;
+}
+
+.portfolio .grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: static;
+}
+
+.portfolio .grid .grid-item {
+  padding: 10px;
+  margin: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio .grid .grid-item img {
+  width: 100%;
+}
+
+.portfolio .bottom-line {
+  width: 100%;
+  height: 20px;
+  background: #000;
+}
+
+.modal-box {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(3, 3, 3, 0.9);
+  -webkit-transition: all .33s ease-out;
+  transition: all .33s ease-out;
+  z-index: 1101;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.modal-box .overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+  z-index: 1100;
+}
+
+.modal-box .modal-box-image {
+  background: transparent;
+  position: absolute;
+  width: 35%;
+  height: 90vh;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.modal-box .modal-box-image img {
+  width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.modal-box.invisible {
+  opacity: 1;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+@media only screen and (max-width: 768px) {
+  .portfolio .port-btn {
+    margin-bottom: 20px;
+  }
+  .modal-box-image {
+    width: 70% !important;
+  }
+}
+
+.aboutMe {
+  width: 100%;
+  height: 600px;
+  background: url("../img/profile/1.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.aboutMe .about-info {
+  background: #fff;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  padding: 30px;
+}
+
+.blog {
+  background: #000;
+  padding-top: 150px;
+}
+
+.blog .blog-space {
+  margin-top: 70px;
+}
+
+.blog .blog-head {
+  color: #fff;
+}
+
+.contact {
+  background: url("../img/profile/IMG20201230165151-01-01.jpeg"), center center;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.contact .contact-cont {
+  margin: 150px 0px;
+  background: rgba(0, 0, 0, 0.849);
+  text-align: center;
+  padding: 20px;
+}
+
+.contact .contact-cont i {
+  font-size: 30px;
+  padding: 20px;
+  color: #fff;
+}
+
+.copyright {
+  background: #000;
+  color: #fff;
+  font-size: 20px;
+}
+/*# sourceMappingURL=style.css.map */
