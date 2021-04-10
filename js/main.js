@@ -121,11 +121,33 @@ window.onkeydown = function (e) {
     }
 }
 
+          const toggle = document.querySelector("#toggler");
+          const checkbtn = document.querySelector("#toggler-btn");
+          const main = document.querySelector("#nav-bar");
+          const navlink = document.querySelector(".nav-item")
+
+          document.onclick = function(e){
+            if(e.target.id !== 'nav-bar' && e.target.id !== 'toggler-btn'){
+              checkbtn.classList.remove('active')
+              main.classList.remove('show')
+            }
+          };
+          navlink.onclick = function(e){
+            if(e.target.class !== 'nav-item'){
+              checkbtn.classList.remove('active')
+              main.classList.remove('show')
+            }
+          };
+          toggle.onclick = function(){
+            checkbtn.classList.toggle('active')
+          }
+
 $(window).on('load', function() { // makes sure the whole site is loaded 
   $('#status').fadeOut(); // will first fade out the loading animation 
   $('#preloader').delay(550).fadeOut('slow'); // will fade out the white DIV that covers the website. 
   $('body').delay(550).css({'overflow':'visible'});
 })
+
 
 
 

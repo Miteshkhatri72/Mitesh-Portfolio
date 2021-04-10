@@ -59,7 +59,7 @@
 
 .carousel-fade .carousel-inner .carousel-item img {
   width: 100% !important;
-  height: 90vh;
+  height: 100vh;
   -o-object-fit: cover !important;
      object-fit: cover !important;
 }
@@ -175,7 +175,7 @@ body,
   position: absolute;
   left: 50%;
   top: 50%;
-  background: url(../img/logo/logo-main.png);
+  background: url(../img/logo/logo-main.svg);
   background-repeat: no-repeat;
   background-position: center;
   margin: -100px 0 0 -100px;
@@ -256,12 +256,86 @@ nav .nav-active {
   transition: all 1s ease;
 }
 
-.s-info {
-  padding-top: 20px;
+.logo-main img {
+  -webkit-animation: bird 5s ease infinite;
+          animation: bird 5s ease infinite;
 }
 
-.s-info .photography {
-  letter-spacing: 11px;
+.logo-main h2 {
+  -webkit-animation: bird-head 5s ease infinite;
+          animation: bird-head 5s ease infinite;
+}
+
+@-webkit-keyframes bird {
+  0% {
+    -webkit-transform: scale(0) rotate(180deg);
+            transform: scale(0) rotate(180deg);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0) rotate(360deg);
+            transform: scale(0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes bird {
+  0% {
+    -webkit-transform: scale(0) rotate(180deg);
+            transform: scale(0) rotate(180deg);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0) rotate(360deg);
+            transform: scale(0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes bird-head {
+  0% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes bird-head {
+  0% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 1;
+  }
 }
 
 .btn-group-justified {
@@ -436,7 +510,10 @@ nav .nav-active {
 
 .copyright {
   background: #000;
+}
+
+.copyright p {
   color: #fff;
-  font-size: 20px;
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */

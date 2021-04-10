@@ -57,7 +57,7 @@ $main-white: #fff;
           transition-property: opacity;
           img{
             width: 100%!important;
-            height: 90vh;
+            height: 100vh;
             object-fit: cover!important;
           }
       }
@@ -167,7 +167,7 @@ body,
   position: absolute;
   left: 50%;
   top: 50%;
-  background: url(../img/logo/logo-main.png);
+  background: url(../img/logo/logo-main.svg);
   background-repeat: no-repeat;
   background-position: center;
   margin: -100px 0 0 -100px;

@@ -47,6 +47,9 @@
 }
 .copyright{
     background: $main-black;
-    color: $main-white;
-    font-size: 20px;
+    p{
+        color: $main-white;
+    font-size: 14px;
+    }
+    
 }

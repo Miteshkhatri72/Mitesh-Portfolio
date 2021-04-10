@@ -1,7 +1,37 @@
-.s-info{
-    padding-top: 20px;
-    .photography{
-        letter-spacing: 11px;
+.logo-main{
+    img{
+       animation: bird 5s ease infinite;
+    }
+    h2{
+        animation: bird-head 5s ease infinite;
+    }
+}
+@keyframes bird {
+    0%{
+        transform: scale(0) rotate(180deg);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+    }
+}
+@keyframes bird-head {
+    0%{
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1.2);
+        opacity: 1;
     }
 }
 
